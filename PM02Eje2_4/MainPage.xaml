@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:media1="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
+             x:Class="PM02Eje2_4.MainPage">
+
+    <ScrollView Grid.Row="1">
+        <StackLayout Orientation="Vertical" 
+                     Padding="5,5,5,5" 
+                     Spacing="5"
+                     >
+
+            <Frame BackgroundColor="DarkGreen" 
+                   Padding="5,0,0,5" 
+                   CornerRadius="10" 
+                   HeightRequest="40">
+
+                <Label 
+                    Text="Ejercicio 2.4 Agustin Paz Canales"
+                     TextColor="White"
+                    FontSize="20"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"/>
+        </Frame>
+
+        <media1:VideoView x:Name="video" 
+                              AutoPlay="False" 
+                              ShowControls="True" 
+                              WidthRequest ="320"
+                              HeightRequest="302"/>
+
+            <Entry 
+                    x:Name="TNombre"
+                    Margin="0,40,0,0" 
+                   Placeholder="Nombre"
+                FontSize="16"
+                    TextColor="black"/>
+            <Entry 
+                    x:Name="TDescrip"
+                    Margin="0,5,0,0" 
+                    Placeholder="Descripcion"
+                    FontSize="16"
+                    TextColor="black"/>
+            
+            <Button x:Name="TomarVideo" 
+                     Clicked="TomarVideo_Clicked"
+                     Text="Tomar Video"
+                    CornerRadius="8"
+                    Margin="30,30,30,0"
+                    BackgroundColor="DarkGreen"
+                    TextTransform="None"
+                    TextColor="White"></Button>
+
+            <Button x:Name="Ver" IsVisible="true" 
+                   Clicked="Ver_Clicked"
+                    CornerRadius="8"
+                    Margin="30,10,30,0"
+                    BackgroundColor="DarkGreen"
+                    TextColor="White"
+                    TextTransform="None"
+                    Text="Ver Lista Videos"></Button>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
